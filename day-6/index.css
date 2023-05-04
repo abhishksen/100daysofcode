@@ -1,0 +1,64 @@
+*{
+    margin: 0;padding: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.box{
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ff7300;
+    border-radius: 5px;
+}
+
+h1{
+    color: #ff7300;
+    font-size: 40px;
+    font-style: italic;
+    padding-bottom: 20px;
+}
+
+button{
+    color: #fff;
+    background: #ff7300;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 7px 20px;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+#stage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 300px;
+    padding: 15px 0;
+    /* height: 150px; */
+    /* border: 1px solid #ff7300; */
+    font-size: 50px;
+    color: #ff7300;
+}
+
+#apple-shelf, #orange-shelf{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: row; */
+    width: 300px;
+    padding: 7px 0;
+    margin: 10px 0;
+    font-size: 17px;
+    border-radius: 5px;
+    font-size: 20px;
+    border-bottom: 1px solid #ff7300;
+}
