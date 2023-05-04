@@ -36,3 +36,10 @@ Topics covered during these days
 apart from learning these topics build this awesome javascript game also check it out [here](https://blaackjaack.netlify.app/)
 
 <img width="960" alt="day-4-5" src="https://user-images.githubusercontent.com/100835323/235976985-8a1052bd-cb0e-41ea-87ea-d4e981fa1dc3.png">
+
+#  Day 6
+
+Solo project : Random password generator 
+Check it out [here](https://passid.netlify.app/)
+
+<img width="957" alt="day-6" src="https://user-images.githubusercontent.com/100835323/236200794-b3b79063-2dda-4050-abc1-ae386420f471.png">
