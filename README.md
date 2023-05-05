@@ -1,5 +1,5 @@
 # 100daysofcode
-This is repo to track my learning progress.
+This GitHub repo is used to track my learning progress.
 
 Since I already have some knowledge about html and css, decided to start directly from javascript, let's see where it takes me...
 
