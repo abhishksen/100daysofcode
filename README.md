@@ -44,9 +44,12 @@ Check it out [here](https://passid.netlify.app/)
 
 <img width="957" alt="day-6" src="https://user-images.githubusercontent.com/100835323/236200794-b3b79063-2dda-4050-abc1-ae386420f471.png">
 
-#  Day 7 
+#  Day 7 8
 
 -- addEventListner
+-- innerHtml
+-- template literals & strings 
+-- more dom manipulation with html inside javascript using template literals
 
 
 
