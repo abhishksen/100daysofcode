@@ -47,8 +47,11 @@ Check it out [here](https://passid.netlify.app/)
 #  Day 7 8
 
 -- addEventListner
+
 -- innerHtml
+
 -- template literals & strings 
+
 -- more dom manipulation with html inside javascript using template literals
 
 
