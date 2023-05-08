@@ -2,7 +2,7 @@
 
 -- first clone this repo
 
--- to use this chrome extension first head to [chrome:extensions](chrome://extensions/)
+-- to use this chrome extension first head to [chrome://extensions]() in the browser
 
 -- toggle the developer mode on
 
