@@ -46,7 +46,7 @@ Check it out [here](https://passid.netlify.app/)
 
 #  Day 7 8
 
--- addEventListner
+-- addEventListner()
 
 -- innerHtml
 
@@ -54,5 +54,22 @@ Check it out [here](https://passid.netlify.app/)
 
 -- more dom manipulation with html inside javascript using template literals
 
+#  Day 9
+
+-- const 
+
+-- input.value
+
+-- function parameters
+
+-- localStorage
+
+--The JSON object
+
+-- objects in arrays
+
+and finally made [this](https://github.com/abhishksen/100daysofcode/tree/main/day-9/chrome_extension_project) chrome extension to keep a track of all the websites one vists 
+
+![image](https://user-images.githubusercontent.com/100835323/236825583-65a6b8c0-3493-4690-97a8-31e9e4752d07.png)
 
 
