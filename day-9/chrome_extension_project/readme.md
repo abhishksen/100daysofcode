@@ -8,7 +8,7 @@
 
 -- click on load unpacked button
 
--- choose [day-9/chrome_extension_project](https://github.com/abhishksen/100daysofcode/tree/main/day-9/chrome_extension_project)) folder named chrome_extension_project
+-- choose [day-9/chrome_extension_project](https://github.com/abhishksen/100daysofcode/tree/main/day-9/chrome_extension_project) folder named chrome_extension_project
 
 -- now you're ready to use the extension to store all the leads on the browser 
 
