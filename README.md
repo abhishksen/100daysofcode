@@ -74,4 +74,6 @@ and finally made [this](https://github.com/abhishksen/100daysofcode/tree/main/da
 
 #  Day 10
 
+Practiced day 9 concepts and build a color flipper app using javascript concepts learnt so far. Check it out [here](https://colorflipy.netlify.app/)
 
+<img width="960" alt="day-10-proj" src="https://github.com/abhishksen/100daysofcode/assets/100835323/9a393376-b9c8-4bb4-b57b-88eea3864469">
