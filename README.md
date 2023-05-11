@@ -77,3 +77,31 @@ and finally made [this](https://github.com/abhishksen/100daysofcode/tree/main/da
 Practiced day 9 concepts and build a color flipper app using javascript concepts learnt so far. Check it out [here](https://colorflipy.netlify.app/)
 
 <img width="960" alt="day-10-proj" src="https://github.com/abhishksen/100daysofcode/assets/100835323/9a393376-b9c8-4bb4-b57b-88eea3864469">
+
+# Day 11 
+
+--import
+
+--firebase(initializeApp, getDatabase, reference, push, onValue, snapshot, remove)
+
+--IDs
+
+--Object to Arrays conversion
+
+-- createElement
+
+-- Flexbox: flex-wrap, gap
+
+-- user-select
+
+-- Setting the viewport
+
+-- Favicon
+
+--Web Application Manifest
+
+Check out the final project of javascript basics [here](https://toddoos.netlify.app/)
+
+<img width="960" alt="day-11-proj-final" src="https://github.com/abhishksen/100daysofcode/assets/100835323/961d0c7d-d53c-4eb9-9242-620c07f83ab2">
+
+
