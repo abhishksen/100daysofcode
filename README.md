@@ -104,6 +104,6 @@ Check out the final project of javascript basics [here](https://toddoos.netlify.
 
 <img width="960" alt="day-11-proj-final" src="https://github.com/abhishksen/100daysofcode/assets/100835323/961d0c7d-d53c-4eb9-9242-620c07f83ab2">
 
-#  Day 12 13
+#  Day 12 13 14
 
 
