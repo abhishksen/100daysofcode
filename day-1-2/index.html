@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Day-1, Day-2 & Day 3 Building a counter app</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- counter app challenge -->
+    <h2>Counter App</h2>
+    <h1 id="count-el">0</h1>
+    <div class="btn-box">
+      <button id="increment-btn" onclick="increment()">INCREMENT</button>
+      <button id="decrement-btn" onclick="decrement()">DECREMENT</button>
+    </div>
+    <button id="save-btn" onclick="save()">SAVE</button>
+    <!-- <p id="welcome-el"></p> -->
+    <p id="save-el">Previous Entries:</p>
+
+    <!-- showing error message -->
+    <button id="error-btn" onclick="showErrorMsg()">Show Error</button>
+    <p id="error"></p>
+
+    <!-- calculator challenge -->
+    <div>
+      <span id="num1-el"></span>
+      <span id="num2-el"></span>
+    </div>
+    <br />
+    <div>
+      <button id="calc-btn" onclick="add()">Add</button>
+      <button id="calc-btn" onclick="subtract()">Subtract</button>
+      <button id="calc-btn" onclick="multiply()">Multiply</button>
+      <button id="calc-btn" onclick="divide()">Divide</button>
+    </div>
+    <br />
+    <span id="res-el">Result: </span>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
