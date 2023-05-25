@@ -106,4 +106,8 @@ Check out the final project of javascript basics [here](https://toddoos.netlify.
 
 #  Day 12 13 14
 
+#  Day 15
+
+#  Day 16
+
 

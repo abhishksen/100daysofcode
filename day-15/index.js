@@ -124,12 +124,12 @@ console.log(employee);
 
 /*
     **** Challenge ****
-    
+
     Imagine you are going out to do some grocery shopping.
     So you have an array called shoppingList with all the products you want to buy.
-    
+
     Now that you are inside of the shop, you have a basket with all the products from your list, but you want to add a few more.
-    
+
     Create a new array called shoppingBasket, that will be a copy of the shoppingList array, and add some new products into it. 
 
 */
@@ -394,23 +394,23 @@ userData()
  * 
  * RESTFul API - https://jsonplaceholder.typicode.com/
  * Docs - https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
- */   
+ */
 
-// fetch('https://jsonplaceholder.typicode.com/todos/1')
-// .then(response => response.json())
-// .then(data => console.log(data));
+fetch('https://jsonplaceholder.typicode.com/todos/1')
+    .then(response => response.json())
+    .then(data => console.log(data));
 
-fetch('https://jsonplaceholder.typicode.com/todos',{
+fetch('https://jsonplaceholder.typicode.com/todos', {
     method: 'POSt',
     body: JSON.stringify({
-        postId:1,
+        postId: 1,
         name: 'Abhishek',
-        email:'abhisheksen@gmail.com',
+        email: 'abhisheksen@gmail.com',
         body: 'Hello there! This is Abhishek Sen'
     }),
 })
-.then(response => response.json())
-.then(data => console.log(data));
+    .then(response => response.json())
+    .then(data => console.log(data));
 
 /**
  * Fetch - Challenge
@@ -422,14 +422,107 @@ fetch('https://jsonplaceholder.typicode.com/todos',{
  * Docs - https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
  */
 
-fetch('https://jsonplaceholder.typicode.com/comments',{
+fetch('https://jsonplaceholder.typicode.com/comments/1')
+    .then((res) => res.json())
+    .then((data) => console.log(data));
+
+fetch('https://jsonplaceholder.typicode.com/comments', {
     method: 'POST',
     body: JSON.stringify({
-        postId:1,
         name: 'Abhishek',
-        email:'abhi@gmail.com',
-        body: 'Hello there! This is Abhishek Sen'
+        email: 'abhi@gmail.com',
+        body: 'Hello there! This is Abhishek Sen',
+        postId: 1,
     }),
 })
-.then(response => response.json())
-.then(data => console.log(data));
+    .then((response) => response.json())
+    .then((data) => console.log(data));
+
+
+fetch('https://jsonplaceholder.typicode.com/comments/1')
+    .then((res) => res.json())
+    .then((data) => {
+        console.log(data);
+        const { email, body, name, id } = data;
+        console.log(email, body, name, id);
+        title.textContent = name;
+    });
+
+const title = document.querySelector('.title');
+
+// async await in javascript
+
+const photos = [];
+
+function photoUpload() {
+    let uploadStatus = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            photos.push("Profile Pic");
+            resolve("Photo Uploaded")
+        }, 3000)
+    })
+
+    let result = uploadStatus;
+
+    console.log(result);
+    console.log(photos.length);
+}
+
+photoUpload();
+
+async function asyncPhotoUpload() {
+    let uploadStatus = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            photos.push("Profile Pic");
+            resolve("Photo Uploaded")
+        }, 3000)
+    })
+
+    let result = await uploadStatus;
+
+    console.log(result);
+    console.log(photos.length);
+}
+
+asyncPhotoUpload();
+
+// async await in javascript - challenge
+
+
+//Print on the console a random joke from the Chuck Norris API using Fetch and Async and Await
+
+// const title = document.querySelector('.title');
+
+const apiUrl = "https://api.chucknorris.io/jokes/random";
+
+async function getJoke() {
+    // let result = await new Promise((resolve, reject) => {
+    //     setTimeout(() => {
+    //         fetch(apiUrl).then((res) => res.json()).then((data) => {
+    //             title.textContent = data.value;
+    //             console.log(data);
+    //         })
+    //         resolve("Joke fetched");
+    //     }, 3000);
+    // });
+
+    const response = await fetch(apiUrl);
+    const data = await response.json();
+    console.log(data.value);
+    title.textContent = data.value;
+}
+
+getJoke(); 
+
+// sets in javascript ES6
+
+const namesArr = new Set([1,2,1,321,31,11,3,1,1,1,1,1,1,1,1,1,1,1,1,1,1]);
+namesArr.add(23);
+namesArr.add(23).add(17);
+console.log(namesArr);
+console.log(namesArr.has(13));
+console.log(namesArr.delete(1));
+console.log(namesArr);
+namesArr.clear();
+console.log(namesArr.size);
+console.log(namesArr);
