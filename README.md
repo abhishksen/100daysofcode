@@ -124,11 +124,15 @@ Check out the final project of javascript basics [here](https://toddoos.netlify.
 
 -- built [this](https://cradprofilr.netlify.app/) profile card using react
 
+<img width="960" alt="day-13" src="https://github.com/abhishksen/100daysofcode/assets/100835323/d4967652-4a85-46e6-a6af-ecd32c94ab44">
+
 #  Day 14
 
 -- props and how to pass props from one component to another
 
 -- built [this](https://airbnbexperiencesui.netlify.app/) airbnb experiences ui clone using react custom components(reusable component) and used the props concepts
+
+![image](https://github.com/abhishksen/100daysofcode/assets/100835323/15980d4e-c5b2-40fc-8c01-69124b5d4b0a)
 
 #  Day 15
 
