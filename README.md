@@ -104,10 +104,40 @@ Check out the final project of javascript basics [here](https://toddoos.netlify.
 
 <img width="960" alt="day-11-proj-final" src="https://github.com/abhishksen/100daysofcode/assets/100835323/961d0c7d-d53c-4eb9-9242-620c07f83ab2">
 
-#  Day 12 13 14
+#  Day 12 
+
+-- how to use react directly using cdns (the old way)
+
+#  Day 13 
+
+-- started learning react 
+
+-- how to setup react with vite pkg manager
+
+-- react basics like file and folder structure
+
+-- react fragments
+
+-- jsx(javascript and xml)
+
+-- react custom components
+
+-- built [this](https://cradprofilr.netlify.app/) profile card using react
+
+#  Day 14
+
+-- props and how to pass props from one component to another
+
+-- built [this](https://airbnbexperiencesui.netlify.app/) airbnb experiences ui clone using react custom components(reusable component) and used the props concepts
 
 #  Day 15
 
+-- javascript revisited (ES6 and beyond)
+
+-- learnt new javascript ES6+ syntax
+
 #  Day 16
+
+-- react states and useState hook
 
 
