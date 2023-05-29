@@ -140,8 +140,11 @@ Check out the final project of javascript basics [here](https://toddoos.netlify.
 
 -- learnt new javascript ES6+ syntax
 
-#  Day 16
+#  Day 16 17 18 19
 
 -- react states and useState hook
+-- react useEffect hook
 
+and built this [meme generator](https://reactmemes.netlify.app/) using react useState and useEffect hooks
 
+![image](https://github.com/abhishksen/100daysofcode/assets/100835323/5affb72d-a79e-4f0d-9a24-6fe499ad51f8)
