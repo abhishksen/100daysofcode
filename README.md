@@ -150,4 +150,10 @@ and built this [meme generator](https://reactmemes.netlify.app/) using react use
 
 ![image](https://github.com/abhishksen/100daysofcode/assets/100835323/5affb72d-a79e-4f0d-9a24-6fe499ad51f8)
 
-#  Day 20
+#  Day 20 21 
+
+built [this](https://markdownotes.netlify.app/) markdown editor notes using react states and hooks, some third party libraries like react-mde (currently using local storage for saving the notes data will refactor it to firebase database) 
+
+![image](https://github.com/abhishksen/100daysofcode/assets/100835323/3e1c2db4-9fc5-4a55-a51d-2b3b4dbac69e)
+
+
