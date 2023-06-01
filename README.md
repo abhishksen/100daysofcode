@@ -156,4 +156,11 @@ built [this](https://markdownotes.netlify.app/) markdown editor notes using reac
 
 ![image](https://github.com/abhishksen/100daysofcode/assets/100835323/3e1c2db4-9fc5-4a55-a51d-2b3b4dbac69e)
 
+#  Day 22
+
+Built this number game using react best practices, check it out [here](https://tenzzee.netlify.app/)
+
+<img width="960" alt="day-22 1" src="https://github.com/abhishksen/100daysofcode/assets/100835323/4c18576e-0f58-4468-b572-6d5cc72066fc">
+
+
 
