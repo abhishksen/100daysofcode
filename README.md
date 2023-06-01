@@ -1,5 +1,5 @@
 # 100daysofcode
-This GitHub repo contains all the progress in my learnings as a part of my # 100daysofcode challenge.
+This GitHub repo contains all the progress in my learnings as a part of my #100daysofcode challenge.
 
 Since I already have some knowledge about html and css, decided to start directly from javascript, let's see where it takes me...
 
