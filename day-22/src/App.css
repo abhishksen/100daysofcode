@@ -1,0 +1,111 @@
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  background: #13294c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+}
+
+.main-container {
+  max-width: 450px;
+  background: #f5f5f5;
+  min-height: 480px;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px,
+    rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px,
+    rgba(0, 0, 0, 0.07) 0px 16px 16px;
+}
+
+.die {
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #13294c;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px,
+    rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px,
+    rgba(0, 0, 0, 0.07) 0px 16px 16px;
+}
+
+.container-grid {
+  display: grid;
+  grid-template: auto auto / repeat(5, 1fr);
+  gap: 1rem;
+}
+
+.rollDice-btn {
+  color: #fff;
+  background: #3e88ff;
+  padding: 10px 13px;
+  /* margin-top: 20px; */
+  font-size: 23px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px,
+    rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px,
+    rgba(0, 0, 0, 0.07) 0px 16px 16px;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 10px;
+  margin: 0 7px;
+}
+
+.title {
+  color: #13294c;
+  font-style: italic;
+}
+
+.desc-text {
+  padding: 13px;
+  color: #13294ce4;
+}
+
+.count-total {
+  color: #13294c;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.count-total > span {
+  color: #3e88ff;
+}
+
+@media (max-width: 500px) {
+  .main-container {
+    max-width: 350px;
+  }
+}
