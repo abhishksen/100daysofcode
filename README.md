@@ -162,7 +162,7 @@ Built this number game using react best practices, check it out [here](https://t
 
 <img width="960" alt="day-22 1" src="https://github.com/abhishksen/100daysofcode/assets/100835323/4c18576e-0f58-4468-b572-6d5cc72066fc">
 
-#  Day 23 Day 24 
+#  Day 23 24 25
 
 
 
