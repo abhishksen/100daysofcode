@@ -4,6 +4,7 @@ import UseEffect from './Hooks/useEffect/UseEffect'
 import UseReducer from './Hooks/useReducer/UseReducer'
 
 import './App.css'
+import UseRef from './Hooks/useRef/UseRef'
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
       <UseState />
       <UseEffect />
       <UseReducer />
+      <UseRef />
     </div>
   )
 }
