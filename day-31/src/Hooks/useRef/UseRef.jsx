@@ -5,7 +5,8 @@ const UseRef = () => {
     const inputRef = useRef(null);
 
     const change = () => {
-        inputRef.current.value = "";
+        inputRef.current.focus();
+        // inputRef.current.value = "";
     }
 
   return (
@@ -13,7 +14,7 @@ const UseRef = () => {
       useRef hook
       <h3>Abhi</h3>
       <input type="text" placeholder='name...' ref={inputRef} />
-      <button onChange={change}>change</button>
+      <button onClick={change}>change</button>
     </div>
   )
 }

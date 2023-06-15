@@ -5,6 +5,7 @@ import UseReducer from './Hooks/useReducer/UseReducer'
 
 import './App.css'
 import UseRef from './Hooks/useRef/UseRef'
+import UseLayoutEffecct from './Hooks/uselayoutEffect/UseLayoutEffecct'
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
       <UseEffect />
       <UseReducer />
       <UseRef />
+      <UseLayoutEffecct />
     </div>
   )
 }
