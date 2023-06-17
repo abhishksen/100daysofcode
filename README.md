@@ -173,6 +173,12 @@ learnt a lot about react-router-dom, routes, browserRouter, router, routerProvid
 ![image](https://github.com/abhishksen/100daysofcode/assets/100835323/26aee8df-0f46-4172-afea-c1e9395fe61b)
 
 
+#  Day 31 32 33 34 35
+
+Learnt all react hooks (most used ones)
+
+useState, useContext, useEffect, useCallback, useMemo, useReducer, useRef, useLayoutEffect, useImperativeHandle
+
 
 
 

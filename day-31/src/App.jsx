@@ -14,7 +14,7 @@ import UseCallback from './Hooks/useCallback/UseCallback'
 const App = () => {
   return (
     <div>
-      {/* React hooks
+      React hooks
       <UseState />
       <UseEffect />
       <UseReducer />
@@ -22,7 +22,7 @@ const App = () => {
       <UseLayoutEffecct />
       <UseImperativeHandle />
       <UseContext />
-      <UseMemo /> */}
+      <UseMemo />
       <UseCallback />
     </div>
   )

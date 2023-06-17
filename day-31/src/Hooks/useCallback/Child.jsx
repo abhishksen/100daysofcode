@@ -1,11 +1,15 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
-const Child = () => {
-  return (
-    <div>
-      child component
-    </div>
-  )
+const Child = ({ returnComment }) => {
+    useEffect(() => {
+        console.log("function called")
+    },[returnComment]);
+    return (
+        <div>
+            child component <br />
+            {returnComment("abhishek")}
+        </div>
+    )
 }
 
 export default Child
