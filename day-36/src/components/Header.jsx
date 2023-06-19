@@ -6,7 +6,7 @@ const Header = () => {
         <Navbar bg='dark' variant='dark' style={{ height: 70 }}>
             <Container style={{ justifyContent: 'space-evenly' }}>
                 <Navbar.Brand>
-                    Shopping Cart
+                        Shopping Cart
                 </Navbar.Brand>
                 <Navbar.Text className='search'>
                     <FormControl

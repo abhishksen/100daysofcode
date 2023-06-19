@@ -1,12 +1,14 @@
 import Header from './components/Header';
 
 import './App.css';
+import Router from './Routes/Router';
 
 const App = () => {
   return (
-    <div>
+    <>
       <Header />
-    </div>
+      <Router />
+    </>
   )
 }
 
