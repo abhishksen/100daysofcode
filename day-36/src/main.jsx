@@ -8,7 +8,7 @@ import Context from './context/Context.jsx';
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Context>
-    <App />
+      <App />
     </Context>
   </React.StrictMode>,
 )
