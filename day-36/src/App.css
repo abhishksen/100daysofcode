@@ -29,3 +29,9 @@
 .title{
     font-size: 25px;
 }
+
+.products{
+    width: 300px;
+    margin: 10px;
+    cursor: pointer;
+}
