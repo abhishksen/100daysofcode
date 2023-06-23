@@ -1,4 +1,3 @@
-import React from 'react'
 import { CartState } from '../context/Context'
 import ProductCard from '../components/ProductCard';
 import Filters from '../components/Filters';
