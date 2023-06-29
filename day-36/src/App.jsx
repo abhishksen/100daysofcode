@@ -1,4 +1,4 @@
-import Header from './components/Header';
+// import Header from './components/Header';
 
 import './App.css';
 import Router from './Routes/Router';
@@ -6,7 +6,7 @@ import Router from './Routes/Router';
 const App = () => {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <Router />
     </>
   )

@@ -11,7 +11,7 @@ const Header = () => {
         <Navbar bg='dark' variant='dark' style={{ height: 70 }}>
             <Container style={{ justifyContent: 'space-evenly' }}>
                 <Navbar.Brand>
-                    Shopping Cart
+                    <Link to='/' className='logoTitle'> Shopping Cart</Link>
                 </Navbar.Brand>
                 <Navbar.Text className='search'>
                     <FormControl
@@ -49,9 +49,9 @@ const Header = () => {
                                                 />
                                             </span>
                                         ))}
-                                      <Link to='/cart'>
-                                    <Button style={{ width: "95%", margin: "0 10px" }}>Go to cart</Button>
-                                      </Link>  
+                                    <Link to='/cart'>
+                                        <Button style={{ width: "95%", margin: "0 10px" }}>Go to cart</Button>
+                                    </Link>
                                 </>
                             ) : (
                                 <span style={{ padding: 10 }}>Cart is empty</span>
