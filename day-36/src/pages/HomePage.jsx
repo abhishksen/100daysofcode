@@ -1,6 +1,6 @@
 // import Image from 'react-bootstrap/Image'
 import { Container, Col, Image, Row, Button } from 'react-bootstrap'
-import heroImg from '../../public/img/heroImg.svg'
+import heroImg from '/img/heroImg.svg'
 import { useNavigate } from 'react-router-dom'
 const HomePage = () => {
 
