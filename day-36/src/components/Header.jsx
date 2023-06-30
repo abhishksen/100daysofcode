@@ -11,7 +11,8 @@ const Header = () => {
         <Navbar bg='dark' variant='dark' style={{ height: 70 }}>
             <Container style={{ justifyContent: 'space-evenly' }}>
                 <Navbar.Brand>
-                    <Link to='/' className='logoTitle'> Shopping Cart</Link>
+                    <Link to='/' className='logoTitle'> ReactCart</Link>
+                    <Link to='/products' className='productPageLink logoTitle'>Products</Link>
                 </Navbar.Brand>
                 <Navbar.Text className='search'>
                     <FormControl

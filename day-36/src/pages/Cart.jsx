@@ -3,7 +3,11 @@ import { CartState } from '../context/Context'
 import { Button, Col, Form, Image, ListGroup, Row } from 'react-bootstrap'
 import Rating from '../components/Rating'
 import { AiFillDelete } from 'react-icons/ai';
+import { useNavigate } from 'react-router-dom';
 const Cart = () => {
+
+  const navigate = useNavigate();
+
 
   const {
     state: { cart },
@@ -12,9 +16,20 @@ const Cart = () => {
 
   const [total, setTotal] = useState(0);
 
+
+
   useEffect(() => {
     setTotal(cart.reduce((acc, curr) => acc + Number(curr.price) * curr.qty, 0));
   }, [cart])
+
+  if (cart.length === 0) {
+    return (
+      <div className='emptyCartContent'>
+        <h3>Opps! Cart is empty.</h3>
+        <Button variant='outline-dark' onClick={() => navigate('/products')}>Go to product listing page</Button>
+      </div>
+    )
+  }
 
   return (
     <div className='home'>
@@ -70,7 +85,7 @@ const Cart = () => {
       <div className="filters summary">
         <span className='title'>Total {cart.length} items in the cart</span>
         <span>Total: ${total}</span>
-        <Button type='button' disabled={cart.length === 0}>Proceed to Checkout</Button>
+        <Button type='button' disabled={cart.length === 0} onClick={() => navigate('/ordersuccess')}>Proceed to Checkout</Button>
       </div>
     </div>
   )

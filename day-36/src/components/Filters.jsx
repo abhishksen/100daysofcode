@@ -1,11 +1,9 @@
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Rating from './Rating'
-import { useState } from 'react';
 import { CartState } from '../context/Context';
-const Filters = () => {
 
-    const [rate, setRate] = useState(3);
+const Filters = () => {
 
     const { prodState: { byStock, byFastDelivery, byRating, sort },
         prodDispatch,
@@ -87,11 +85,11 @@ const Filters = () => {
                 } style={{ cursor: "pointer" }} />
             </span>
             <Button varient="light"
-            onChange={() => {
-                prodDispatch({
-                    type: "CLEAR_FILTERS",
-                })
-            }}
+                onClick={() => {
+                    prodDispatch({
+                        type: "CLEAR_FILTERS",
+                    })
+                }}
             >Clear Filter</Button>
         </div>
     )
