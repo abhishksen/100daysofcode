@@ -183,3 +183,8 @@ useState, useContext, useEffect, useCallback, useMemo, useReducer, useRef, useLa
 
 
 #  Day 36 37 38 39 40 41 42
+
+created this shopping cart project using react context API. Check it out [here](https://shopingcartreact.netlify.app/)
+
+![image](https://github.com/abhishksen/100daysofcode/assets/100835323/c620a4e2-b89f-49fb-9f8e-488bec06be32)
+
