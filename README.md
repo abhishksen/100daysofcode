@@ -188,3 +188,9 @@ created this shopping cart project using react context API. Check it out [here](
 
 ![image](https://github.com/abhishksen/100daysofcode/assets/100835323/c620a4e2-b89f-49fb-9f8e-488bec06be32)
 
+#  Day 43 44 45 46 47
+
+Created a simple react native image card app
+
+![image](https://github.com/abhishksen/100daysofcode/assets/100835323/2eb33f95-f9bf-4479-b236-57498317c59e)
+
