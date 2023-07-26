@@ -27,10 +27,16 @@ app.get('/success', (req, res) => {
 });
 
 
-app.post('/', (req, res) => {
+app.post('/contact', (req, res) => {
     data.push(req.body);
     // res.render("success", { data: data });
     res.redirect('/success');
+})
+
+app.get('/users', (req, res) => {
+    res.json({
+        data,
+    })
 })
 
 app.listen(5500, () => {
