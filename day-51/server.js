@@ -30,6 +30,15 @@ import path from 'path'
 
 const app = express();
 
+// setting up static folder
+const staticFile = express.static(path.join(path.resolve(), "public"));
+
+app.use(staticFile);
+
+
+// setting up view engine
+app.set('view engine', 'ejs');
+
 app.get('/', (req, res) => {
     // res.send('Hello world');
     // res.sendStatus(200);
@@ -45,9 +54,11 @@ app.get('/', (req, res) => {
     //     skills: ['HTML', 'CSS', 'JS', 'React'],
     // })
 
-    const loc = path.resolve();
+    // const loc = path.resolve();
     // console.log(loc);
-    res.sendFile(path.join(loc, 'app', 'pages', 'index.html'));
+    // res.sendFile(path.join(loc, 'app', 'view', 'index.html'));
+
+    res.render("index", {name:'Abhishek'});
 
 });
 
