@@ -28,25 +28,23 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(cookieParser());
 
-
 // setting up view engine
 app.set('view engine', 'ejs');
 
-app.get('/', (req, res) => {
-
-    // console.log(req.cookies.token);
+// middleware for checking authenticationS
+const isAuthenticated = (req, res, next) => {
     const { token } = req.cookies;
     if (token) {
         res.render("index");
+        next();
     } else {
         res.render("login");
     }
+}
 
+app.get('/', isAuthenticated, (req, res) => {
+    res.render("index");
 });
-
-// app.get('/home', (req, res) => {
-//     res.render("index");
-// });
 
 app.post('/login', (req, res) => {
     res.cookie("token", "1234567890", {
@@ -69,6 +67,10 @@ app.get('/success', (req, res) => {
     res.render("success");
 });
 
+app.get('/add', isAuthenticated, (req, res) => {
+    res.redirect("/");
+});
+
 
 app.post('/contact', async (req, res) => {
     const { name, email } = req.body;
@@ -79,7 +81,7 @@ app.post('/contact', async (req, res) => {
 
 app.get('/users', (req, res) => {
     res.json({
-        data,
+        User,
     })
 })
 
