@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "app-ui",
-    "slug": "app-ui",
+    "name": "weather_app",
+    "slug": "weather_app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
