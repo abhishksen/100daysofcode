@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "day-43",
-    "slug": "day-43",
+    "name": "app-ui",
+    "slug": "app-ui",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
