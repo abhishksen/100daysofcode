@@ -3,6 +3,7 @@ import express from 'express';
 import path from 'path'
 import mongoose from 'mongoose';
 import cookieParser from 'cookie-parser';
+import jwt from 'jsonwebtoken';
 
 mongoose.connect("mongodb://localhost:27017", {
     dbName: 'backend',
@@ -32,9 +33,15 @@ app.use(cookieParser());
 app.set('view engine', 'ejs');
 
 // middleware for checking authenticationS
-const isAuthenticated = (req, res, next) => {
+const isAuthenticated = async (req, res, next) => {
     const { token } = req.cookies;
     if (token) {
+
+        const decoded = jwt.verify(token, "this is my secret key");
+        //    console.log(decoded);
+
+        req.user = await User.findById(decoded._id);
+
         res.render("success");
         next();
     } else {
@@ -43,7 +50,8 @@ const isAuthenticated = (req, res, next) => {
 }
 
 app.get('/', isAuthenticated, (req, res) => {
-    res.render("success");
+    // console.log(req.user);
+    res.render("success", { email: req.user.email });
 });
 
 app.post('/login', async (req, res) => {
@@ -51,7 +59,10 @@ app.post('/login', async (req, res) => {
     const { email, password } = req.body;
     const user = await User.create({ email, password });
 
-    res.cookie("token", user._id, {
+    const token = jwt.sign({ _id: user._id }, "this is my secret key");
+    // console.log(token);
+
+    res.cookie("token", token, {
         httpOnly: true,
         expires: new Date(Date.now() + 60 * 1000),
     });
@@ -68,7 +79,7 @@ app.get('/logout', (req, res) => {
 
 
 app.get('/success', (req, res) => {
-    res.render("success");
+    res.render("success", { email: req.user.email });
 });
 
 
