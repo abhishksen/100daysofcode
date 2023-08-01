@@ -4,12 +4,14 @@ import path from 'path'
 import mongoose from 'mongoose';
 import cookieParser from 'cookie-parser';
 import jwt from 'jsonwebtoken';
+import bcrypt from 'bcrypt';
 
 mongoose.connect("mongodb://localhost:27017", {
     dbName: 'backend',
 }).then(c => console.log("Connected to DB")).catch(e => console.log(e));
 
 const logedUserSchema = new mongoose.Schema({
+    name: String,
     email: String,
     password: String,
 });
@@ -36,45 +38,83 @@ app.set('view engine', 'ejs');
 const isAuthenticated = async (req, res, next) => {
     const { token } = req.cookies;
     if (token) {
-
         const decoded = jwt.verify(token, "this is my secret key");
         //    console.log(decoded);
-
         req.user = await User.findById(decoded._id);
-
-        res.render("success");
+        // res.render("success");
         next();
     } else {
-        res.render("login");
+        res.redirect("/login");
     }
 }
 
 app.get('/', isAuthenticated, (req, res) => {
     // console.log(req.user);
-    res.render("success", { email: req.user.email });
+    res.render("success", { name: req.user.name, email: req.user.email });
 });
-
 
 app.get('/register', (req, res) => {
     res.render("register");
 });
 
-
-app.get('/success', (req, res) => {
-    res.render("success", { email: req.user.email });
+app.get('/login', (req, res) => {
+    res.render("login");
 });
 
-
+app.get('/success', (req, res) => {
+    res.render("success", { name: req.user.name, email: req.user.email });
+});
 
 app.post('/login', async (req, res) => {
-    // console.log(req.body);
     const { email, password } = req.body;
 
-    let user = await User.findOne({ email });
-    if (!user) {
-        res.redirect('/register');
+    if (email === "" || password === "") {
+        return res.render('login', { email, password, error: "Please fill all the fields" });
     }
-    user = await User.create({ email, password });
+
+    let user = await User.findOne({ email });
+
+    if (!user) {
+        return res.redirect('/register');
+    }
+
+    // const isMatch = user.password === password;
+    const isMatch = await bcrypt.compare(password, user.password);
+
+    if (!isMatch) {
+        return res.render('login', { email, error: "Invalid email or password" });
+    }
+
+    const token = jwt.sign({ _id: user._id }, "this is my secret key");
+
+    res.cookie("token", token, {
+        httpOnly: true,
+        expires: new Date(Date.now() + 60 * 1000),
+    });
+    res.redirect('/');
+
+});
+
+app.post('/register', async (req, res) => {
+    // console.log(req.body);
+    const { name, email, password } = req.body;
+
+    if (name === "" || email === "" || password === "") {
+        return res.render('register', { name, email, password, error: "Please fill all the fields" });
+    }
+
+    let user = await User.findOne({ email });
+    if (user) {
+        return res.redirect('/login');
+    }
+
+    const hashedPassword = await bcrypt.hash(password, 10);
+
+    user = await User.create({
+        name,
+        email,
+        password: hashedPassword
+    });
 
     const token = jwt.sign({ _id: user._id }, "this is my secret key");
     // console.log(token);

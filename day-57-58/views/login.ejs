@@ -11,8 +11,19 @@
     <main>
       <form method="post" action="/login">
         <h3>Login with ID and password</h3>
-        <input type="email" name="email" placeholder="Enter email" />
-        <input type="password" name="password" placeholder="Enter password" />
+        <input
+          type="email"
+          name="email"
+          placeholder="Enter email"
+          value="<%= locals.email %>"
+        />
+        <input
+          type="password"
+          name="password"
+          placeholder="Enter password"
+          value="<%= locals.password %>"
+        />
+        <p><%= locals.error %></p>
         <button type="submit">Login</button>
       </form>
     </main>

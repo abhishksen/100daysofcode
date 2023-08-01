@@ -28,6 +28,18 @@ form{
     box-shadow: 0 0 5px #ccc;
 }
 
+h3{
+    font-size: 18px;
+    color: #333;
+    padding: 5px 0;
+}
+
+p{
+    font-size: 14px;
+    color: red;
+    padding: 5px 0;
+}
+
 input{
     padding: 10px;
     margin: 10px 0;

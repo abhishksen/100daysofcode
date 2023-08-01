@@ -11,8 +11,25 @@
     <main>
       <form method="post">
         <h3>Register Now</h3>
-        <input type="email" name="email" placeholder="Enter email" />
-        <input type="password" name="password" placeholder="Enter password" />
+        <input
+          type="text"
+          name="name"
+          placeholder="Enter name"
+          value="<%=locals.name%>"
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="Enter email"
+          value="<%=locals.email%>"
+        />
+        <input
+          type="password"
+          name="password"
+          placeholder="Enter password"
+          value="<%=locals.password%>"
+        />
+        <p><%=locals.error%></p>
         <button type="submit">Register</button>
       </form>
     </main>
