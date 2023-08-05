@@ -3,6 +3,9 @@ import mongoose from 'mongoose';
 
 const app = express();
 
+// using middleware
+app.use(express.json());
+
 mongoose.connect("mongodb://localhost:27017", { dbName: "backendApi", })
     .then(() => console.log("MongoDB connected"))
     .catch((err) => console.log(err));
@@ -22,6 +25,8 @@ app.get('/', (req, res) => {
 app.get('/users/all', async (req, res) => {
     const users = await User.find({});
 
+    console.log(req.query.cat);
+
     res.json({
         success: true,
         message: "All users",
@@ -30,20 +35,38 @@ app.get('/users/all', async (req, res) => {
 });
 
 app.post('/users/new', async (req, res) => {
+
+    const { name, email, password } = req.body;
+
+    console.log(req.body)
+
     await User.create({
-        name: "John Doe",
-        email: "john@gmail.com",
-        password: "123456"
+        name, email, password
     })
 
-    res.json({
+    res.status(201).cookie("tempi", "lol").json({
         success: true,
         message: "Registered successfuly",
     })
 });
 
 
+app.get("/userid/special", async (req, res) => {
+    res.json({
+        success: true,
+        message:"just joking",
+    });
+});
 
+app.get("/userid/:id", async (req, res) => {
+    const { id } = req.params;
+    const user = await User.findById(id);
+    // console.log(user);
+    res.json({
+        success: true,
+        user,
+    });
+});
 
 
 app.listen(5000, "localhost", () => {
