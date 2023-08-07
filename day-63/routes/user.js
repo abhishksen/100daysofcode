@@ -1,19 +1,17 @@
 import express from 'express';
-import { deleteUser, getAllUsers, getUserWithID, registerNewUser, specialUser, updateUser } from '../controllers/user.js';
+import { getAllUsers, getMyProfile, login, logout, register } from '../controllers/user.js';
+import { isAuthenticated } from '../middlewares/auth.js';
 
 const router = express.Router();
 
 router.get('/all', getAllUsers);
 
-router.post('/new', registerNewUser);
+router.post('/new', register);
 
-router.get("/userid/special", specialUser);
+router.post('/login', login);
 
+router.get('/logout', logout);
 
-// alternate way to do this by chaining all the routes together
-// router.get("/userid/:id", getUserWithID);
-// router.put("/userid/:id", updateUser);
-// router.delete("/userid/:id", deleteUser);
-router.route("/userid/:id").get(getUserWithID).put(updateUser).delete(deleteUser);
+router.get('/me', isAuthenticated, getMyProfile);
 
 export default router;
