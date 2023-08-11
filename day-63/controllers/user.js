@@ -50,6 +50,8 @@ export const getMyProfile = (req, res) => {
 export const logout = (req, res) => {
     res.status(200).cookie("token", "", {
         expires: new Date(Date.now()),
+        sameSite: process.env.NODE_ENV === "Developemnt" ? "lax" : "none",
+        secure: process.env.NODE_ENV === "Developemnt" ? false : true,
     }).json({
         success: true,
         message: "Logged out successfully"
