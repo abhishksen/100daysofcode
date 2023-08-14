@@ -10,9 +10,11 @@ const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const { isAuthenticated, setIsAuthenticated } = useContext(Context);
+  const { isAuthenticated, setIsAuthenticated, loading, setLoading } = useContext(Context);
 
   const submitHandler = async (e) => {
+
+    setLoading(true);
 
     e.preventDefault();
 
@@ -28,15 +30,16 @@ const Register = () => {
       );
       toast.success(data.message);
       setIsAuthenticated(true);
+      setLoading(false);
     } catch (error) {
-      toast.error("some error");
+      toast.error(error.response.data.message);
       setIsAuthenticated(false);
+      setLoading(false);
     }
-
 
   };
 
-  if(isAuthenticated) return <Navigate to={"/"} />
+  if (isAuthenticated) return <Navigate to={"/"} />
 
   return (
     <div className="login">
@@ -65,7 +68,7 @@ const Register = () => {
           onChange={(e) => setPassword(e.target.value)}
           required
         />
-        <button type="submit">Register</button>
+        <button disabled={loading} type="submit">Register</button>
         <hr />
         <h6>or</h6>
         <Link to={"/login"}>Login</Link>
