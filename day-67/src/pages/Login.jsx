@@ -7,8 +7,8 @@ import { toast } from "react-hot-toast";
 const Login = () => {
 
     const { isAuthenticated, setIsAuthenticated, loading, setLoading } = useContext(Context);
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
+    const [email, setEmail] = useState("user@gmail.com");
+    const [password, setPassword] = useState("user@123");
 
     const submitHandler = async (e) => {
 
@@ -39,8 +39,8 @@ const Login = () => {
 
     if (isAuthenticated) return <Navigate to={"/"} />
 
-
     return (
+
         <div className="login">
             <form onSubmit={submitHandler}>
                 <input
@@ -65,6 +65,7 @@ const Login = () => {
                 <Link to={"/register"}>Register</Link>
             </form>
         </div>
+
     )
 }
 

@@ -17,10 +17,10 @@ $text-color: #EEEEEE;
     .todosContainer {
         width: 90%;
         max-width: 400px;
-        background-color: $secondary-color;
+        // background-color: $secondary-color;
         border-radius: 8px;
         padding: 20px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        // box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 
         form {
             display: flex;
@@ -31,12 +31,14 @@ $text-color: #EEEEEE;
                 padding: 10px;
                 border: none;
                 border-bottom: 2px solid $primary-color;
-                background-color: $secondary-color;
+                // background-color: $secondary-color;
+                background-color: transparent;
                 color: $text-color;
                 font-size: 16px;
-
+                
                 &::placeholder {
-                    color: $text-color;
+                    // color: $text-color;
+                    color: $secondary-color;
                 }
 
                 &:focus {

@@ -1,20 +1,19 @@
 import { useContext } from "react";
 import { Context } from "../main";
 import Loader from "../components/Loader";
+import { Navigate } from "react-router-dom";
 
 const Profile = () => {
 
   const { isAuthenticated, loading, user } = useContext(Context);
 
-  console.log(user);
-
-  if (!isAuthenticated) return <h3>Login first!!</h3>
+  if (!isAuthenticated) return <Navigate to={"/login"} />
 
   return (
     loading ? <Loader /> : (
       <div className="wrapper">
         <div className="profile">
-          <img src="../../public/assets/profile.jpg" alt="profile_image" />
+          {/* <img src="../assets/profile.png" alt="profile_image" /> */}
           <h3>{user?.name}</h3>
           <p>{user?.email}</p>
         </div>
