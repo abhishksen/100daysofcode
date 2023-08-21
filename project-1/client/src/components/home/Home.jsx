@@ -1,9 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Box, Button, HStack, Heading, Image, Stack, Text, VStack } from '@chakra-ui/react'
-import '../styles/home.css'
-import bg from '../assets/images/bg.png'
-import intro from '../assets/videos/intro.mp4'
+import '../../styles/home.css'
+import bg from '../../assets/images/bg.png'
+import intro from '../../assets/videos/intro.mp4'
 import { FaReact, FaNodeJs, FaFigma } from 'react-icons/fa'
 
 const Home = () => {
@@ -21,9 +21,10 @@ const Home = () => {
             width={"full"}
             // alignItems={["center", "flex-start"]}
             alignItems={"flex-start"}
+            spacing={'8'}
           >
             <Heading children="LEARN FROM THE INDUSTRY EXPERTS" size={'2xl'} />
-            <Text children="Find a new way of learning with interactive coursewok." />
+            <Text fontSize={'xl'} children="Find a new way of learning with interactive coursewok." />
             <Link to="/courses">
               <Button size={"lg"} colorScheme='purple'>
                 Get Started
@@ -47,7 +48,6 @@ const Home = () => {
       <div className="vidContainer">
         <video
           src={intro}
-          autoPlay={true}
           controls
           controlsList='nodownload nofullscreen noremoteplayback'
           disablePictureInPicture
