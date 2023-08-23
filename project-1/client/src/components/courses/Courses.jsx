@@ -46,7 +46,7 @@ const Courses = () => {
         'Other',
     ];
     return (
-        <Container minH={'95vh'} maxW={'container.lg'} paddingY={'8'}>
+        <Container minH={'100vh'} maxW={'container.lg'} paddingY={'8'}>
             <Heading children="Explore All courses" m={'8'} />
             <Input
                 value={keyword} onChange={(e) => setKeyword(e.target.value)}

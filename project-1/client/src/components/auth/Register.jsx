@@ -35,8 +35,8 @@ const Register = () => {
 
     return (
         <Container minH={'100vh'} my={'10'}>
-            <VStack h={'full'} paddingX={['2', '0']} justifyContent={'center'} spacing={'16'}>
-                <Heading children='Register to Tutorial Hell' />
+            <VStack h={'full'} paddingX={['2', '0']} alignItems={['flex-start', 'center']} justifyContent={'flex-start'} spacing={'16'}>
+                <Heading textAlign={['left']} marginTop={['2rem', '0.5']} children='Register to Tutorial Hell' />
                 <form style={{ width: '100%' }}>
                     <Box marginY={'4'} display={'flex'} justifyContent={'center'}>
                         <Avatar src={imagePrev} size={'2xl'} />
