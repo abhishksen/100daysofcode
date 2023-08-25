@@ -1,10 +1,10 @@
 import React from 'react'
 import { Button, Container, HStack, Heading, Stack, Text } from '@chakra-ui/react'
-import Profile from '../profile/Profile';
+import Profile from './profile/Profile';
 import { Link } from 'react-router-dom';
 import VideoPlayer from '../videoplayer/VideoPlayer';
 import { RiSecurePaymentFill } from 'react-icons/ri'
-import Terms from '../terms/Terms';
+import Terms from './terms/Terms';
 import termsAndConditions from '../../assets/docs/termsAndConditions';
 
 const About = () => {

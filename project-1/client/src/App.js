@@ -16,6 +16,7 @@ import Success from './components/payments/Success';
 import Failed from './components/payments/Failed';
 import NotFound from './components/layout/notFound/NotFound';
 import CoursePage from './components/coursePage/CoursePage';
+import Profile from './components/profile/Profile';
 
 function App() {
 
@@ -33,6 +34,9 @@ function App() {
         <Route path='/request' element={<Request />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/about' element={<About />} />
+
+        <Route path='/profile' element={<Profile />} />
+
         <Route path='/login' element={<Login />} />
         <Route path='/register' element={<Register />} />
         <Route path='/forgetpassword' element={<ForgetPassword />} />

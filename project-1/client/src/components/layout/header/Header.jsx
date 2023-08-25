@@ -16,7 +16,7 @@ const LinkButton = ({ url = '/', title = 'Home', onClose }) => {
 const Header = () => {
     const { isOpen, onOpen, onClose } = useDisclosure();
 
-    const isAuthenticated = false;
+    const isAuthenticated = true;
     const user = {
         role: 'admin',
     };
@@ -32,7 +32,7 @@ const Header = () => {
 
             <Button
                 onClick={onOpen}
-                colorScheme='purple' width={'12'} height={'12'} rounded={'md'} position={'fixed'} top='4' left='4'>
+                colorScheme='purple' width={'12'} height={'12'} rounded={'md'} position={'fixed'} top='4' left='4' zIndex={'overlay'}>
                 <RiMenu3Fill />
             </Button>
             <Drawer placement='left' onClose={onClose} isOpen={isOpen}>
