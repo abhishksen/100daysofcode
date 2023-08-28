@@ -40,7 +40,7 @@ const Courses = () => {
 
     const categories = [
         'Web Development',
-        'Mobile Development',
+        'App Development',
         'UI/UX Design',
         'Data Science',
         'Other',

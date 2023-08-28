@@ -20,16 +20,16 @@ const Register = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [imagePrev, setimagePrev] = useState();
-    const [image, setimage] = useState();
+    const [imagePrev, setImagePrev] = useState();
+    const [image, setImage] = useState();
 
     const changeImageHandler = (e) => {
         const file = e.target.files[0];
         const reader = new FileReader();
         reader.readAsDataURL(file);
         reader.onloadend = () => {
-            setimagePrev(reader.result);
-            setimage(file);
+            setImagePrev(reader.result);
+            setImage(file);
         }
     }
 

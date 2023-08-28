@@ -1,9 +1,10 @@
 import { Box, Grid, Heading, Stack, Text } from '@chakra-ui/react'
 import React from 'react'
-import cursor from '../../../assets/images/cursor.png'
+// import cursor from '../../../assets/images/cursor.png'
 import Sidebar from '../xyz/Sidebar'
 import Databox from '../xyz/Databox'
 import Bar from '../xyz/Bar'
+import { DoughnutChart, LineChart } from '../xyz/Chart'
 
 const Dashboard = () => {
     return (
@@ -14,7 +15,7 @@ const Dashboard = () => {
                 px={['4', '0']}
             >
                 <Text textAlign={'center'} opacity={'0.5'}
-                    children={`Last changed of ${String(new Date()).split(' ').slice(0, 4)}`}
+                    children={`Last updated on ${String(new Date()).split(' ').slice(0, 4)}`}
                 />
                 <Heading children='Dashboard' ml={['0', '10']} py={['4', '6']} mb={'4'} textAlign={['center', 'left']} />
                 <Stack
@@ -29,13 +30,15 @@ const Dashboard = () => {
                     <Databox title={'Subscription'} qty={70} qtyPercentage={7} profit={false} />
                 </Stack>
                 <Box
-                    m={['0', '4']}
+                    m={['0', '10']}
+                    my={['6']}
                     borderRadius={'lg'}
+                    border={'1px'}
                     p={['0', '6']}
                     mt={'4'}
                 >
                     <Heading textAlign={['center', 'left']} size={'md'} py={['6', '0']} children='Views Graph' />
-                    {/* line graph here */}
+                    <LineChart />
                 </Box>
                 <Grid templateColumns={['1fr', '2fr 1fr']}>
                     <Box>
@@ -56,7 +59,24 @@ const Dashboard = () => {
                             <Bar title='Subscription' value={70} profit={true} />
                         </Box>
                     </Box>
-                    <Box
+                    <Box>
+                        <Heading
+                            children='Users'
+                            size={'sm'}
+                            my={['6', '0']}
+                            ml={['0', '10']}
+                            paddingBottom={['0', '6']}
+                        />
+                        <Box
+                            ml={['0', '10']}
+                            border={'1px'}
+                            borderRadius={'lg'}
+                            p={'4'}
+                        >
+                            <DoughnutChart />
+                        </Box>
+                    </Box>
+                    {/* <Box
                         boxSizing='border-box'
                         ml={['0', '4']}
                     >
@@ -66,8 +86,8 @@ const Dashboard = () => {
                             size={'sm'}
                             py={'6'}
                         />
-                        {/* Donought graph */}
-                    </Box>
+                        <DoughnutChart />
+                    </Box> */}
                 </Grid>
             </Box>
             <Sidebar />
