@@ -1,7 +1,8 @@
-import { Box, Grid, Heading, TableContainer, Table, TableCaption, Thead, Tr, Th, Tbody } from '@chakra-ui/react'
+import { Box, Grid, Heading, TableContainer, Table, TableCaption, Thead, Tr, Th, Tbody, useDisclosure } from '@chakra-ui/react'
 import React from 'react'
 import Sidebar from '../xyz/Sidebar'
 import CoursesRow from '../xyz/CoursesRow';
+import CourseModal from '../xyz/CourseModal';
 
 const AdminCourses = () => {
 
@@ -30,8 +31,11 @@ const AdminCourses = () => {
         },
     ];
 
+    const { isOpen, onClose, onOpen } = useDisclosure();
+
     const courseDetailHandler = (userId) => {
         console.log(userId);
+        onOpen();
     }
 
     const deleteButtonHandler = (userId) => {
@@ -74,6 +78,12 @@ const AdminCourses = () => {
                         </Tbody>
                     </Table>
                 </TableContainer>
+
+                <CourseModal
+                    isOpen={isOpen}
+                    onClose={onClose}
+                />
+
             </Box>
             <Sidebar />
         </Grid>
