@@ -42,12 +42,21 @@ const AdminCourses = () => {
         console.log(userId);
     }
 
+    const deleteLectureButtonHandler = (courseId, lectureId) => {
+        console.log(courseId, lectureId);
+    }
+
+    const addLectureHandler = (e, courseId, title, description, video) => {
+        e.preventDefault();
+        console.log('add lecture')
+    }
+
 
     return (
         <Grid minH={'100vh'} templateColumns={['1fr', '5fr 1fr']}>
-            <Box p={['0', '8']} overflowX={'auto'}>
+            <Box p={['0', '14']} overflowX={'auto'}>
                 <Heading
-                    children='All Users'
+                    children='All Courses'
                     textTransform={'uppercase'}
                     mb={'14'}
                     textAlign={['center', 'left']}
@@ -82,6 +91,10 @@ const AdminCourses = () => {
                 <CourseModal
                     isOpen={isOpen}
                     onClose={onClose}
+                    id={"courseId"}
+                    courseTitle={"courseTitle"}
+                    deleteButtonHandler={deleteLectureButtonHandler}
+                    addLectureHandler={addLectureHandler}
                 />
 
             </Box>
