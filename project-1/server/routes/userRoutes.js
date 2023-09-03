@@ -1,8 +1,20 @@
 import express from 'express';
-import { getUser } from '../controllers/userController.js';
+import { register } from '../controllers/userController.js';
 
 const router = express.Router();
 
-router.route('/user').get(getUser);
+// register user
+router.route('/register').post(register);
+
+// login
+// logout
+// get my profile
+// update password
+// update profile
+// update profile picture
+// forgot password
+// reset password
+// add to playlist
+// remove from playlist
 
 export default router;
