@@ -129,7 +129,34 @@ export const updateProfile = catchAsyncError(async (req, res, next) => {
 
 export const updateProfilePicture = catchAsyncError(async (req, res, next) => {
 
+    res.status(200).json({
+        success: true,
+        message: 'Profile picture updated successfully',
+    })
+});
 
+export const forgetPassword = catchAsyncError(async (req, res, next) => {
+
+    const { email } = req.body;
+
+    const user = await User.findOne({ email });
+
+    if (!user) {
+        return next(new ErrorHandler('User not found', 400));
+    }
+
+    const resetToken = await user.getResetToken();
+
+
+
+
+    res.status(200).json({
+        success: true,
+        message: `Reset token has been sent to ${user.email}`,
+    })
+});
+
+export const resetPassword = catchAsyncError(async (req, res, next) => {
 
     res.status(200).json({
         success: true,
