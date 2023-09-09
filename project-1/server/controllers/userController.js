@@ -1,6 +1,7 @@
 import { catchAsyncError } from "../middlewares/catchAsyncError.js";
 import { User } from "../models/User.js";
 import ErrorHandler from "../utils/errorHandler.js";
+import { sendEmail } from "../utils/sendEmail.js";
 import { sendToken } from "../utils/sendToken.js";
 
 export const register = catchAsyncError(async (req, res, next) => {
@@ -147,7 +148,11 @@ export const forgetPassword = catchAsyncError(async (req, res, next) => {
 
     const resetToken = await user.getResetToken();
 
+    const url = `${process.env.FRONTEND_URL}/resetpassword/${resetToken}}`;
 
+    const message = `Your password reset token is as follows:\n\n${url}\n\nIf you have not requested this email, then ignore it.`;
+
+    await sendEmail(user.email, 'TutorialHell: Password reset request', message);
 
 
     res.status(200).json({
