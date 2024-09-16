@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "day-43",
-    "slug": "day-43",
+    "name": "weather_app",
+    "slug": "weather_app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
